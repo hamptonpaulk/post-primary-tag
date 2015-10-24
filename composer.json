@@ -1,0 +1,18 @@
+{
+  "name": "HamptonPaulk/PrimaryTag",
+  "description": "Allow selection of a 'Primary' tag per post.",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Hampton Paulk",
+      "email": "hello@hamptonpaulk.com",
+      "homepage": "http://hamptonpaulk.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.3"
+  }
+}
