@@ -128,9 +128,10 @@ class Post_Primary_Tag {
 	public function pt_save_meta( $post_id ) {
 
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-			return $post_id; }
+			return $post_id;
+        }
 
-		if ( isset( $_POST['pt_primary_tag_id'] ) && wp_verify_nonce( "{$post_id}_nonce", "update_{$post_id}" ) ) {
+		if ( isset( $_POST['pt_primary_tag_id'] ) && wp_verify_nonce( $_REQUEST[ "{$post_id}_nonce" ], "update_{$post_id}" ) ) {
 			update_post_meta( $post_id, 'pt_primary_tag_id', absint( $_POST['pt_primary_tag_id'] ) );
 		} else {
 			delete_post_meta( $post_id, 'pt_primary_tag_id' );
